@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>SkyCast Delhi</title>
+
+<link
+rel="stylesheet"
+href="/static/style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+
+<h1>☁️ SkyCast Delhi</h1>
+
+<p>
+
+Live Weather + SARIMA Forecast
+
+</p>
+
+</header>
+
+
+<section class="hero">
+
+<div class="current">
+
+<h1 id="current-temp">
+
+--°C
+
+</h1>
+
+<h2 id="weather-description">
+
+Loading...
+
+</h2>
+
+<p id="current-date"></p>
+
+<p id="live-time"></p>
+
+<p class="update-label">
+
+    Last Weather Update:
+
+</p>
+
+<p id="weather-update"></p>
+
+</p>
+
+</div>
+
+<div class="details">
+
+<div class="info">
+
+<span>💧</span>
+
+<h3 id="humidity">--%</h3>
+
+<p>Humidity</p>
+
+</div>
+
+<div class="info">
+
+<span>🌬</span>
+
+<h3 id="wind">--</h3>
+
+<p>Wind</p>
+
+</div>
+
+<div class="info">
+
+<span>📊</span>
+
+<h3 id="pressure">--</h3>
+
+<p>Pressure</p>
+
+</div>
+
+<div class="info">
+
+<span>🌅</span>
+
+<h3 id="sunrise">--</h3>
+
+<p>Sunrise</p>
+
+</div>
+
+<div class="info">
+
+<span>🌇</span>
+
+<h3 id="sunset">--</h3>
+
+<p>Sunset</p>
+
+</div>
+
+<div class="info">
+
+<span>🌫</span>
+
+<h3 id="aqi">--</h3>
+
+<p>Air Quality</p>
+
+<small id="aqi-status">
+
+Loading...
+
+</small>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="charts">
+
+    <div class="chart-tabs">
+
+        <button
+            class="chart-btn active"
+            onclick="showChart('temperature', this)">
+
+            🌡 Temperature
+
+        </button>
+
+        <button
+            class="chart-btn"
+            onclick="showChart('rain', this)">
+
+            🌧 Rainfall
+
+        </button>
+
+        <button
+            class="chart-btn"
+            onclick="showChart('humidity', this)">
+
+            💧 Humidity
+
+        </button>
+
+        <button
+            class="chart-btn"
+            onclick="showChart('wind', this)">
+
+            🌬 Wind
+
+        </button>
+
+    </div>
+
+    <div class="chart-container">
+
+        <canvas id="weatherChart"></canvas>
+
+    </div>
+
+</section>
+
+<section>
+
+<h2>
+
+20-Days Forecast
+
+</h2>
+
+<div id="forecast">
+
+</div>
+
+</section>
+
+</div>
+
+<script src="/static/charts.js"></script>
+
+<script src="/static/script.js"></script>
+
+</body>
+
+</html>

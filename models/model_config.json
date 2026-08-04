@@ -1,0 +1,132 @@
+{
+    "temperature_max": {
+        "order": [
+            1,
+            1,
+            1
+        ],
+        "seasonal_order": [
+            0,
+            0,
+            1,
+            30
+        ]
+    },
+    "temperature_min": {
+        "order": [
+            1,
+            1,
+            1
+        ],
+        "seasonal_order": [
+            0,
+            0,
+            1,
+            30
+        ]
+    },
+    "temperature_mean": {
+        "order": [
+            1,
+            1,
+            1
+        ],
+        "seasonal_order": [
+            0,
+            0,
+            1,
+            30
+        ]
+    },
+    "humidity": {
+        "order": [
+            1,
+            1,
+            1
+        ],
+        "seasonal_order": [
+            0,
+            0,
+            1,
+            30
+        ]
+    },
+    "precipitation": {
+        "order": [
+            1,
+            1,
+            1
+        ],
+        "seasonal_order": [
+            0,
+            0,
+            1,
+            30
+        ]
+    },
+    "wind_speed": {
+        "order": [
+            1,
+            1,
+            1
+        ],
+        "seasonal_order": [
+            1,
+            0,
+            1,
+            30
+        ]
+    },
+    "wind_direction": {
+        "order": [
+            1,
+            1,
+            1
+        ],
+        "seasonal_order": [
+            1,
+            0,
+            1,
+            30
+        ]
+    },
+    "pressure": {
+        "order": [
+            1,
+            1,
+            1
+        ],
+        "seasonal_order": [
+            1,
+            0,
+            1,
+            30
+        ]
+    },
+    "cloud_cover": {
+        "order": [
+            1,
+            1,
+            1
+        ],
+        "seasonal_order": [
+            0,
+            0,
+            1,
+            30
+        ]
+    },
+    "dew_point": {
+        "order": [
+            1,
+            0,
+            1
+        ],
+        "seasonal_order": [
+            0,
+            0,
+            1,
+            30
+        ]
+    }
+}

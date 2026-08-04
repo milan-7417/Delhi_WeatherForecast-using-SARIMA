@@ -1,0 +1,467 @@
+/* ===========================
+   Global
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+
+    background:linear-gradient(135deg,#2193b0,#6dd5ed);
+
+    min-height:100vh;
+
+    padding:30px;
+
+}
+
+.container{
+
+    max-width:1500px;
+
+    margin:auto;
+
+}
+
+/* ===========================
+   Header
+=========================== */
+
+header{
+
+    color:white;
+
+    margin-bottom:25px;
+
+}
+
+header h1{
+
+    font-size:42px;
+
+    margin-bottom:8px;
+
+}
+
+header p{
+
+    font-size:18px;
+
+    opacity:.9;
+
+}
+
+/* ===========================
+   Hero Section
+=========================== */
+
+.hero{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:40px;
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:40px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+    margin-bottom:40px;
+
+}
+
+/* ===========================
+   Current Weather
+=========================== */
+
+.current{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+.current h1{
+
+    font-size:90px;
+
+    color:#1565c0;
+
+    margin-bottom:10px;
+
+}
+
+.current h2{
+
+    font-size:34px;
+
+    color:#333;
+
+    margin-bottom:10px;
+
+}
+
+.current p{
+
+    font-size:20px;
+
+    color:#666;
+
+}
+
+#current-date{
+
+    margin-top:12px;
+
+    font-size:24px;
+
+    color:#444;
+
+    font-weight:600;
+
+}
+
+#live-time{
+
+    font-size:34px;
+
+    font-weight:bold;
+
+    color:#1565c0;
+
+    margin:8px 0 20px;
+
+}
+
+.update-label{
+
+    color:#777;
+
+    font-size:18px;
+
+    margin-bottom:5px;
+
+}
+
+#weather-update{
+
+    color:#1565c0;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+}
+
+/* ===========================
+   Right Info Cards
+=========================== */
+
+.details{
+
+    flex:1;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+}
+
+.info{
+
+    background:#f7f9fc;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    text-align:center;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.info:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 12px 25px rgba(0,0,0,.15);
+
+}
+
+.info span{
+
+    font-size:30px;
+
+    display:block;
+
+    margin-bottom:10px;
+
+}
+
+.info h3{
+
+    color:#1565c0;
+
+    font-size:28px;
+
+    margin-bottom:8px;
+
+}
+
+.info p{
+
+    color:#666;
+
+    font-size:17px;
+
+}
+
+/*==================================
+Charts
+==================================*/
+
+.charts{
+
+    background:#ffffff;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    margin:45px 0;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+}
+
+/*--------------------------------*/
+
+.chart-tabs{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:30px;
+
+}
+
+/*--------------------------------*/
+
+.chart-btn{
+
+    border:none;
+
+    outline:none;
+
+    background:#edf2f7;
+
+    color:#333;
+
+    padding:14px 28px;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.chart-btn:hover{
+
+    background:#1976d2;
+
+    color:white;
+
+}
+
+.chart-btn.active{
+
+    background:#1565c0;
+
+    color:white;
+
+}
+
+/*--------------------------------*/
+
+.chart-container{
+
+    position:relative;
+
+    width:100%;
+
+    height:500px;
+
+}
+
+.chart-container canvas{
+
+    width:100% !important;
+
+    height:100% !important;
+
+}
+
+/*==================================
+Responsive
+==================================*/
+
+@media(max-width:768px){
+
+.chart-tabs{
+
+    gap:12px;
+
+}
+
+.chart-btn{
+
+    width:100%;
+
+}
+
+.chart-container{
+
+    height:350px;
+
+}
+
+}
+/* ===========================
+   Forecast
+=========================== */
+
+section h2{
+
+    color:white;
+
+    margin-bottom:20px;
+
+}
+
+#forecast{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:25px;
+
+    margin-bottom:40px;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.card h3{
+
+    color:#1565c0;
+
+    margin-bottom:15px;
+
+    text-align:center;
+
+}
+
+.card p{
+
+    margin:10px 0;
+
+    color:#555;
+
+    font-size:16px;
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:1100px){
+
+.hero{
+
+    flex-direction:column;
+
+}
+
+.details{
+
+    width:100%;
+
+}
+
+}
+
+@media(max-width:800px){
+
+.details{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+.info small{
+
+    display:block;
+
+    margin-top:8px;
+
+    font-size:14px;
+
+    color:#666;
+
+}
